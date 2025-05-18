@@ -45,7 +45,7 @@ This is a single-page HTML application that contains:
 >  This project is a **conceptual prototype** intended for **educational and demonstration purposes only**.  
 >
 > - It is **not fully tested** or secured for real-world use.  
-> - All usernames and passwords are **hard-coded directly in the HTML/JavaScript file** and can be easily accessed or modified.  
+> - All usernames and passwords are **hard-coded directly in the HTML file** and can be easily accessed or modified.  
 > - There is **no encryption**, **no database**, and **no server-side validation**.  
 > - Do **not** use this project to manage real user data or deploy it in a production environment.  
 >
