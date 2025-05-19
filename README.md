@@ -76,6 +76,20 @@ This project is a **responsive web-based authentication system** built with HTML
 ├── AdminPortal.png           # Screenshot of admin panel
 
 ```
+
+# Disclaimer
+
+This project is a **demonstration-only prototype** and should not be used in production environments.
+
+- **No security measures are implemented.** All usernames and passwords are stored in **plain text** inside a `users.json` file.
+- **No encryption, database, or server-side logic** is used. All authentication and data handling occurs **on the client side**.
+- Password reset functionality is **simulated only**. No actual emails are sent.
+- User registration and log data are stored in **memory only** for the session and are **not persistent**.
+
+> This application was developed for **educational purposes**, and is intended as a learning tool for HTML/CSS/JS and basic authentication UI design.  
+> Do **not** use this for handling real user data, personal information, or sensitive credentials.
+
+
 ## How to Run
 
 ### Option 1: Open Directly in Browser
