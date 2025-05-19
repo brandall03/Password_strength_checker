@@ -75,7 +75,7 @@ This project is a **responsive web-based authentication system** built with HTML
 ├── LoginPage.png             # Screenshot of login page
 ├── AdminPortal.png           # Screenshot of admin panel
 
-
+```
 ## How to Run
 
 ### Option 1: Open Directly in Browser
