@@ -1,55 +1,79 @@
-# Simple Login Page with Password Validation and Admin Panel
+# Login & Registration System with Password Strength Checker and Admin Panel
 
-This project is a web-based **login system** built using **HTML** designed for user authentication and role-based behavior (user vs admin). It includes basic password validation, toggle visibility, user feedback, and a minimal admin panel to view all registered demo users.
+This project is a **responsive web-based authentication system** built with HTML, CSS, and JavaScript. It supports login, registration, password strength feedback, password reset requests, and a dynamic admin panel with event logging and export capabilities.
 
-##  Project Structure
+---
 
-This is a single-page HTML application that contains:
+##  Screenshots
 
-- **Login Form** with:
-  - Username/email field
-  - Password field with show/hide toggle
-  - Validation feedback for minimum input requirements
-  - "Forgot Password" alert
+### Login Page
+![Login Page](./LoginPage.png)
 
-- **Welcome Page** for regular users after successful login
+### Admin Panel
+![Admin Panel](./AdminPortal.png)
 
-- **Admin Panel** with a table of all user credentials (for demo purposes only)
+---
 
-##  Features
+##  Features of Your Login System
 
--  **Client-side input validation**:
-  - Username must be at least 3 characters
-  - Password must be at least 6 characters
-  - Error messages appear inline
+###  Login System
+- Users can log in with a **username or email** and **password**.
+- Credentials are checked against a `users.json` file (fetched dynamically via JavaScript).
+- Admins are redirected to the **admin panel**; regular users are shown a welcome page.
 
--  **Show/Hide password** toggle for better UX
+###  Registration System
+- New users can register with a **username, email, and password**.
+- Username and email must be **unique**.
+- Password strength is checked in real-time.
+- New users are added to the session memory (not written back to `users.json` due to static hosting).
 
-   **Role-based login behavior**:
-  - Regular users are directed to a welcome screen
-  - Admin users are shown a table of all users
+### Password Strength Checker
+- Real-time feedback: **Weak**, **Medium**, **Strong**.
+- Displays a checklist of requirements:
+  -  At least 8 characters  
+  -  One uppercase letter  
+  -  One lowercase letter  
+  -  One number  
+  -  One special character
 
--  **Demo accounts only** (no server or real database;)
+### Show/Hide Password
+- Password fields in both login and registration forms include a **toggle visibility** button.
 
-## Demo Users
+### Forgot Password
+- Users can request a password reset by entering their email.
+- A reset message is displayed (demo only).
+- Logs the request in the **admin event log**.
 
-| Username  | Password   | Role     |
-|-----------|------------|----------|
-| admin     | admin123   | Admin    |
-| user1     | password1  | Regular  |
-| user2     | password2  | Regular  |
-| testuser  | testpass   | Regular  |
+### Admin Panel
+- Accessible via admin login (`admin@example.com`, `admin123`).
+- Displays a **table of all users** (username, email, password).
+- Shows a **live event log** of key actions:
+  - Logins
+  - Failed login attempts
+  - Password reset requests
+  - Registrations
 
-##  Disclaimer
+### Export Log as TXT
+- One-click export of the admin event log to a `.txt` file.
 
->  This project is a **conceptual prototype** intended for **educational and demonstration purposes only**.  
->
-> - It is **not fully tested** or secured for real-world use.  
-> - All usernames and passwords are **hard-coded directly in the HTML file** and can be easily accessed or modified.  
-> - There is **no encryption**, **no database**, and **no server-side validation**.  
-> - Do **not** use this project to manage real user data or deploy it in a production environment.  
->
-> This example is designed to illustrate **basic front-end form validation and interface design**, not secure authentication.
+### Session-Based Event Logging
+- Logs are stored in memory for the session and updated live.
+
+### Responsive, Modern UI
+- Clean layout
+- Mobile-friendly
+- Styled using pure CSS and modern design practices
+
+---
+
+##  File Structure
+
+```plaintext
+.
+├── Password_checker.html     # Main HTML file with embedded CSS & JS
+├── users.json                # Simulated database of users
+├── LoginPage.png             # Screenshot of login page
+├── AdminPortal.png           # Screenshot of admin panel
 
 
 ## How to Run
